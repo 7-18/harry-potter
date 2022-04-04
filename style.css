@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-color {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  min-width: 4fr;
+  min-height: 100vh;
+}
+
+.container-color-1 {
+  background: #810103;
+}
+
+.container-color-2 {
+  background: #093e04;
+}
+
+.container-color-3 {
+  background: #ae992e;
+}
+
+.container-color-4 {
+  background: #022559;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.btn {
+  line-height: 1.5;
+  text-align: center;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  padding: 10px 40px;
+  margin-top: 15px;
+  background-color: #ffbf00;
+  border-color: #ffbf00;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background-color: #daa402;
+}
+
+.logo {
+  width: 100%;
+}
+
+.container-hogwarts {
+  top: 1%;
+  opacity: 1;
+  transition: opacity 0.7s;
+  width: 40%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#container-characters {
+  bottom: 50px;
+  opacity: 0;
+  transition: opacity 0.7s;
+  width: 40%;
+  height: 500px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f1d793;
+  border-radius: 5%;
+  border: 2px solid #000;
+  pointer-events: none;
+}
+
+#container-characters.showCharacter {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#container-characters.show {
+  animation: show_character 1s ease forwards;
+}
+
+@keyframes show_character {
+  0% {
+    transform: translate(0%);
+  }
+  40% {
+    transform: translate(0%);
+  }
+  80% {
+    transform: translate(0%);
+  }
+  100% {
+    transform: translate(0%);
+  }
+}
+
+.container-hogwarts.hide {
+  opacity: 0;
+  pointer-events: auto;
+}
+
+.house-logo {
+  width: 160px;
+  height: 180px;
+  position: absolute;
+  top: -100px;
+}
+
+.character-image {
+  width: 250px;
+  height: 250px;
+  border: transparent;
+  border-radius: 25%;
+  margin-top: 40px;
+}
+
+.character-name {
+  font-family: "Kaushan Script", cursive;
+  margin-top: 20px;
+}
+
+.character-house {
+  font-family: "Kaushan Script", cursive;
+}
+
+.btn-character {
+  position: absolute;
+  bottom: -20px;
+}
